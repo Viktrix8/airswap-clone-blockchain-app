@@ -1,19 +1,23 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { Toaster } from 'react-hot-toast'
 
 import Header from '../components/Header'
 import Navbar from '../components/Navbar'
+import Swap from '../components/Swap'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen w-screen text-white">
+    <div className="max-w-screen flex min-h-screen overflow-y-hidden text-white">
       <Head>
         <title>AirSwap Clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Toaster position="top-center" />
       <Navbar />
-      {/* Swap */}
+      {/* @ts-ignore */}
+      <Swap />
       <Header />
     </div>
   )

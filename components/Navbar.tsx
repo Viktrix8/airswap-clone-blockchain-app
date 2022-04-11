@@ -23,7 +23,7 @@ const Navbar = () => {
   const router = useRouter()
 
   return (
-    <div className="flex h-screen w-32 flex-col items-center space-y-16 border-r border-gray-900 px-4 py-12">
+    <div className="hidden max-h-screen w-32 flex-col items-center space-y-16 overflow-y-hidden border-r border-gray-900 px-4 py-12 lg:flex">
       <div
         className="relative flex h-16 w-16 cursor-pointer items-center justify-center"
         onClick={() => router.push('/')}

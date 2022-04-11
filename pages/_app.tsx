@@ -1,8 +1,14 @@
-import '../styles/globals.css'
+import { AirswapProvider } from '../context/AirswapContext'
 import type { AppProps } from 'next/app'
 
+import '../styles/globals.css'
+
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <AirswapProvider>
+      <Component {...pageProps} />
+    </AirswapProvider>
+  )
 }
 
 export default MyApp
